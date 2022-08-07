@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<nav>
+    <img src="static/images/logo.png" width="110" height="110">
+    <div class="logo"></div>
+    <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/launch">LAUNCH</a></li>
+        <li><a href="/spacecraft">SPACECRAFT</a></li>
+        <li><a href="/people">PEOPLE</a></li>
+        <li><a href="/links">LINKS</a></li>
+    </ul>
+  </nav>
+  <header>
+    <div class="headline">
+      <div class="inner">
+        <h1>THE SPACE CENTER</h1>
+        <br><br>
+        <p>Welcome! The Space Center includes all things Space. You will be able to find out information to the next 5 launches
+        from around the globe. You'll be able to check out information on current and old spacecraft, as well as see which astronauts
+        are currently in space.
+        </p>
+      </div>
+    </div>
+  </header>
+<div id="header" style="background:linear-gradient(rgba(170, 172, 177, 0.7),rgba(170, 172, 177, 0.7)),url('static/images/launch.jpg');">  
+    <p id="textDesc">Links to organizations like NASA, SpaceX, Boeing, Lockheed Martin, Blue Origin</p>
+    <br><br>
+    <div id="expDiv">
+    </div>
+    <br>
+    <hr>
+    <footer id="footer"><br><br><br>THE SPACE CENTER designed by Billy Fifield | CS361 Final Project</footer>
+    </div>
+{% endblock %}
