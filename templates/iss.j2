@@ -1,0 +1,54 @@
+<html>
+<!-- Adapted from the teams.html UI design -->
+<head>
+	<title>SPACE CENTER</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/rocket_logo.png')}}" type="image/x-icon" />
+</head>
+
+<body>
+    <nav>
+        <img src="/static/images/logo.png" width="110" height="110" style="padding:25px;">
+        <div class="logo"></div>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/launch">LAUNCH</a></li>
+            <li><a href="#">SPACE STATION</a></li>
+            <li><a href="/people">PEOPLE</a></li>
+            <li><a href="/links">LINKS</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="headline">
+        <div class="inner">
+            <h1>THE SPACE CENTER</h1>
+            <br>
+            <h2>International Space Station</h2>
+        </div>
+        </div>
+    </header>
+        <main id="header" style="background-color: rgb(56, 56, 56);">
+        <br>
+        <div style="margin:auto">
+        <div style="float: left">
+        	<div class="left-column">
+          <table id="issTable">
+            <td><img src="/static/images/iss.jpeg" width="600" height="380"></td>
+            <td><fieldset id="spaceCraftText" style="display:inline-block;">
+            <p id="textDesc">Latitude: {{ iss['latitude'] }}</p>
+            <p id="textDesc">Longitude: {{ iss['longitude'] }} <p> 
+            <p id="textDesc">Altitude: {{ iss['altitude'] }} <p> 
+            <p id="textDesc">Velocity: {{ iss['velocity'] }} km/h<p> 
+            <p id="textDesc">Timezone: {{ location['timezone'] }} <p> 
+            <p id="textDesc">Country: {{ location['country'] }} <p>
+            <br>
+            <p id="textDesc">Fun Fact: The ISS orbits the Earth approximately 16 times every 24 hours! <p>
+            <br><hr><br>
+            <input type="button" value="Click Here to See Map" class="button" id="button" onclick="window.open('{{ location['map_url'] }}')" />
+            </fieldset></td>
+          </table>
+        </main>
+        <hr>
+        <footer id="footer"><br><br><br>THE SPACE CENTER designed by Billy Fifield | CS361 Final Project</footer>
+</body>
+</html>

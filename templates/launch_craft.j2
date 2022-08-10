@@ -1,0 +1,47 @@
+<html>
+<!-- Adapted from the teams.html UI design -->
+<head>
+	<title>Space Craft</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/rocket_logo.png')}}" type="image/x-icon" />
+</head>
+
+<body>
+    <nav>
+        <img src="/static/images/logo.png" width="110" height="110" style="padding:25px;">
+        <div class="logo"></div>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/launch">LAUNCH</a></li>
+            <li><a href="/iss">SPACE STATION</a></li>
+            <li><a href="/people">PEOPLE</a></li>
+            <li><a href="/links">LINKS</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="headline">
+        <div class="inner">
+            <h1>THE SPACE CENTER</h1>
+            <br>
+            <h2>What's Getting Us Into Space?</h2>
+        </div>
+        </div>
+    </header>
+        <main id="header" style="background-color: rgb(56, 56, 56);">
+        <br>
+        <div style="margin:auto">
+        <div style="float: left">
+            <table>
+            <td><img id="craftImg" style="float:left" src={{ data['image'] }} width=600 height=400></img></td>
+            <td><fieldset id="spaceCraftText">
+            <p id="textDesc">{{ data['name'] }}</p>
+            <p id="craftText"> {{ data['description'] }} <p> 
+            </fieldset><td>
+            </table>
+            </div>
+            </div>
+        </main>
+        <hr>
+        <footer id="footer"><br><br><br>THE SPACE CENTER designed by Billy Fifield | CS361 Final Project</footer>
+</body>
+</html>

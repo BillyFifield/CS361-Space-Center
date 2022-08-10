@@ -1,0 +1,104 @@
+<html>
+<!-- Adapted from the teams.html UI design -->
+<head>
+	<title>SPACE CENTER</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/rocket_logo.png')}}" type="image/x-icon" />
+</head>
+
+<body>
+    <nav>
+        <img src="/static/images/logo.png" width="110" height="110" style="padding:25px;">
+        <div class="logo"></div>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="#">LAUNCH</a></li>
+            <li><a href="/iss">SPACE STATION</a></li>
+            <li><a href="/people">PEOPLE</a></li>
+            <li><a href="/links">LINKS</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="headline">
+        <div class="inner">
+            <h1>THE SPACE CENTER</h1>
+            <br>
+            <h2>Check Out the Information on the Next 5 Launches</h2>
+        </div>
+        </div>
+    </header>
+        <main id="header" style="background:linear-gradient(rgba(170, 172, 177, 0.7),rgba(170, 172, 177, 0.7)),url('static/images/launch.jpg');">
+        <br>
+          <table id="table">
+            <tr>
+                <th>Provider</th>
+                <th>Vehicle</th>
+                <th>Mission Name</th>
+                <th>Mission Description</th>
+                <th>Weather</th>
+                <th>Location</th>
+                <th>State</th>
+                <th>Country</th>
+                <th></th>
+            </tr>
+                <tr>
+                    <td>{{ data[0]['provider'] }}</td>
+                    <td><a href="{{data[0]['vehicle_link']}}">{{ data[0]['vehicle_name'] }}</a></td>
+                    <td>{{ data[0]['mission_name'] }}</td>
+                    <td>{{ data[0]['mission_desc'] }}</td>
+                    <td>{{ data[0]['weather'] }}</td>
+                    <td>{{ data[0]['location'] }}</td>
+                    <td>{{ data[0]['state'] }}</td>
+                    <td>{{ data[0]['country'] }}</td>
+                    <td><img src="{{ data[0]['flag'] }}" width="120" height="60"></td>
+                </tr>
+                <tr>
+                    <td>{{ data[1]['provider'] }}</td>
+                    <td><a href="{{data[1]['vehicle_link']}}">{{ data[1]['vehicle_name'] }}</a></td>
+                    <td>{{ data[1]['mission_name'] }}</td>
+                    <td>{{ data[1]['mission_desc'] }}</td>
+                    <td>{{ data[1]['weather'] }}</td>
+                    <td>{{ data[1]['location'] }}</td>
+                    <td>{{ data[1]['state'] }}</td>
+                    <td>{{ data[1]['country'] }}</td>
+                    <td><img src="{{ data[1]['flag'] }}" width="120" height="60"></td>
+                </tr>
+                <tr>
+                    <td>{{ data[2]['provider'] }}</td>
+                    <td><a href="{{data[2]['vehicle_link']}}">{{ data[2]['vehicle_name'] }}</a></td>
+                    <td>{{ data[2]['mission_name'] }}</td>
+                    <td>{{ data[2]['mission_desc'] }}</td>
+                    <td>{{ data[2]['weather'] }}</td>
+                    <td>{{ data[2]['location'] }}</td>
+                    <td>{{ data[2]['state'] }}</td>
+                    <td>{{ data[2]['country'] }}</td>
+                    <td><img src="{{ data[2]['flag'] }}" width="120" height="60"></td>
+                </tr>
+                <tr>
+                    <td>{{ data[3]['provider'] }}</td>
+                    <td><a href="{{data[3]['vehicle_link']}}">{{ data[3]['vehicle_name'] }}</a></td>
+                    <td>{{ data[3]['mission_name'] }}</td>
+                    <td>{{ data[3]['mission_desc'] }}</td>
+                    <td>{{ data[3]['weather'] }}</td>
+                    <td>{{ data[3]['location'] }}</td>
+                    <td>{{ data[3]['state'] }}</td>
+                    <td>{{ data[3]['country'] }}</td>
+                    <td><img src="{{ data[3]['flag'] }}" width="120" height="60"></td>
+                </tr>
+                                <tr>
+                    <td>{{ data[4]['provider'] }}</td>
+                    <td><a href="{{data[4]['vehicle_link']}}">{{ data[4]['vehicle_name'] }}</a></td>
+                    <td>{{ data[4]['mission_name'] }}</td>
+                    <td>{{ data[4]['mission_desc'] }}</td>
+                    <td>{{ data[4]['weather'] }}</td>
+                    <td>{{ data[4]['location'] }}</td>
+                    <td>{{ data[4]['state'] }}</td>
+                    <td>{{ data[4]['country'] }}</td>
+                    <td><img src="{{ data[4]['flag'] }}" width="120" height="60"></td>
+                </tr>
+          </table>
+        </main>
+        <hr>
+        <footer id="footer"><br><br><br>THE SPACE CENTER designed by Billy Fifield | CS361 Final Project</footer>
+</body>
+</html>

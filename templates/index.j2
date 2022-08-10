@@ -1,0 +1,56 @@
+<html>
+<!-- Adapted from the teams.html UI design -->
+<head>
+	<title>SPACE CENTER</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/rocket_logo.png')}}" type="image/x-icon" />
+</head>
+
+<body>
+    <nav>
+        <img src="/static/images/logo.png" width="110" height="110" style="padding:25px;">
+        <div class="logo"></div>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/launch">LAUNCH</a></li>
+            <li><a href="/iss">SPACE STATION</a></li>
+            <li><a href="/people">PEOPLE</a></li>
+            <li><a href="/links">LINKS</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="headline">
+        <div class="inner">
+            <h1>THE SPACE CENTER</h1>
+            <br>
+            <p>Welcome! The Space Center includes all things Space. You will be able to find out information to the next 5 launches
+            from around the globe. You'll be able to check out information on current and old spacecraft, as well as see which astronauts
+            are currently in space.
+            </p>
+        </div>
+        </div>
+    </header>
+        <main id="header" style="background-color: rgb(56, 56, 56);">
+        <br>
+        {% if data['type'] == 'video' %}
+            <h3 id="potdTitle">{{data['title']}}</h3>
+            <br>
+            <center><iframe width="1100" height="630" src="{{ data['url'] }}"></iframe></center>
+            <fieldset id="spacePhotoText">
+                <p id="potdDesc">{{data['description']}}</p>
+            </fieldset>
+        {% else %}
+            <h3 id="potdTitle">{{data['title']}}</h3>
+            <br>
+            <center><img id="potdImage" src="{{data['imageURL']}}" alt="centered image" style="margin-left:auto; margin-right:auto;"></center>
+            <fieldset id="spacePhotoText">
+            <p id="potdCR">© {{data['copyright']}}</p>
+            <p id="potdDesc">{{data['description']}}</p>
+            </fieldset>
+        {% endif %}
+
+        </main>
+        <hr>
+        <footer id="footer"><br><br><br>THE SPACE CENTER designed by Billy Fifield | CS361 Final Project</footer>
+</body>
+</html>

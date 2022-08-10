@@ -1,0 +1,48 @@
+<html>
+<!-- Adapted from the teams.html UI design -->
+<head>
+	<title>SPACE CENTER</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/rocket_logo.png')}}" type="image/x-icon" />
+</head>
+
+<body>
+    <nav>
+        <img src="/static/images/logo.png" width="110" height="110" style="padding:25px;">
+        <div class="logo"></div>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/launch">LAUNCH</a></li>
+            <li><a href="/iss">SPACE STATION</a></li>
+            <li><a href="#">PEOPLE</a></li>
+            <li><a href="/links">LINKS</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="headline">
+        <div class="inner">
+            <h1>THE SPACE CENTER</h1>
+            <br>
+            <h2>Who's Currently in Space?</h2>
+        </div>
+        </div>
+    </header>
+        <main id="header" style="background:linear-gradient(rgba(170, 172, 177, 0.7),rgba(170, 172, 177, 0.7)),url('static/images/astronaut.jpg');">
+        <br>
+          <table id="astronautTable">
+            <tr>
+                <th>Name</th>
+                <th>Craft</th>
+            </tr>
+            {% for person in data %}
+                <tr>
+                    <td>{{person['name']}}</td>
+                    <td>{{person['craft']}}</td>
+                </tr>
+            {% endfor %}
+          </table>
+        </main>
+        <hr>
+        <footer id="footer"><br><br><br>THE SPACE CENTER designed by Billy Fifield | CS361 Final Project</footer>
+</body>
+</html>
