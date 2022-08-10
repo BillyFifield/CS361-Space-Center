@@ -9,4 +9,4 @@ microservice returns the image source of the flag of the country where the launc
 that gets a image and information about the space craft being launched.
 
 To run this application, the following will need to be installed:
-     pip install flask flask-cors
+      pip install flask flask-cors
