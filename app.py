@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from flask_cors import CORS
-from wikiscraper.wikiscraper_tools import search_for
+from wiki_search import wiki_search
 import requests
 
 app = Flask(__name__)
@@ -128,7 +128,7 @@ def launch_craft(craft):
     # The method takes a string of a craft from the launch table and sends it to my
     # partner's wiki scraper microservice, which in returns receives an image of the craft
     # and informationa about it.
-    craftResults = search_for(craft)
+    craftResults = wiki_search(craft)
     craftData = {'description': craftResults['description'],
                  'image': craftResults['images'][0],
                  'name': craft
