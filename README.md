@@ -6,7 +6,7 @@ Google map link to the exact location, as well as data on who is currently in sp
 
 The application in Flask and uses APIs from NASA, RocketLive, and a countryflag API. The application also features two different microservices. The first
 microservice returns the image source of the flag of the country where the launch is taking place. The second microservice is a Wikipedia scraper
-that gets a image and information about the space craft being launched.
+that gets images and information about the space craft being launched.
 
 To run this application, the following will need to be installed:
 
