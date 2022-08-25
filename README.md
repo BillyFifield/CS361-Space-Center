@@ -12,3 +12,5 @@ To run this application, the following will need to be installed:
 
             pip install flask flask-cors
             pip install wikipedia
+
+To view The Space Center in action, watch the demo here: https://youtu.be/uP3QuB5ZqLM
